@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-tennisi-mobile-ds';
+import {
+  CurrencyDollarIcon,
+  CurrencyEuroIcon,
+  CurrencyRubelIcon,
+  multiply,
+} from 'react-native-tennisi-mobile-ds';
 
 export default function App() {
   const [result, setResult] = useState<number | undefined>();
@@ -12,6 +17,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
+      <CurrencyEuroIcon />
+      <CurrencyRubelIcon />
+      <CurrencyDollarIcon />
     </View>
   );
 }

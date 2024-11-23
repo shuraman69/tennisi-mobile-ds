@@ -7,6 +7,7 @@ Tennisi Mobile App Design System
 ```sh
 npm install react-native-tennisi-mobile-ds
 ```
+#### - Install [react-native-svg](https://www.npmjs.com/package/react-native-svg) & [react-native-svg-transformer](https://github.com/kristerkari/react-native-svg-transformer) packages
 
 ## Usage
 
