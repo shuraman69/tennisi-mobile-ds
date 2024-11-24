@@ -1,0 +1,14 @@
+export { default as ArsenalIcon } from './Arsenal.svg';
+export { default as AtleticoIcon } from './Atletico.svg';
+export { default as BarcelonaIcon } from './Barcelona.svg';
+export { default as BayernMünchenIcon } from './BayernMunchen.svg';
+export { default as ChelseaIcon } from './Chelsea.svg';
+export { default as CskaIcon } from './cska.svg';
+export { default as DortmundIcon } from './Dortmund.svg';
+export { default as JuventusIcon } from './Juventus.svg';
+export { default as LiverpoolIcon } from './Liverpool.svg';
+export { default as ManCityIcon } from './ManCity.svg';
+export { default as ManUntIcon } from './ManUnt.svg';
+export { default as RealmadridIcon } from './Realmadrid.svg';
+export { default as SpartakIcon } from './spartak.svg';
+export { default as TottenhamIcon } from './Tottenham.svg';

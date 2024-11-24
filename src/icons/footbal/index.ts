@@ -1,0 +1,13 @@
+export { default as BundesligaIcon } from './Bundesliga.svg';
+export { default as CarabaoCupIcon } from './Carabao-Cup.svg';
+export { default as ChampionshipIcon } from './Championship.svg';
+export { default as EuropaLeagueIcon } from './Europa-league.svg';
+export { default as FACupIcon } from './FA-Cup.svg';
+export { default as LaLigaIcon } from './La-Liga.svg';
+export { default as Liga1Icon } from './Liga-1.svg';
+export { default as PremierLeagueIcon } from './Premier-league.svg';
+export { default as RPLIcon } from './RPL.svg';
+export { default as SeriaAIcon } from './Seria-A.svg';
+export { default as ChampionsLeagueIcon } from './Champions-league.svg';
+export { default as CornerIcon } from './corner.svg';
+export { default as GoalIcon } from './goal.svg';
