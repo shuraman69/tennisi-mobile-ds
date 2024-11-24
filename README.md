@@ -12,12 +12,30 @@ npm install react-native-tennisi-mobile-ds
 ## Usage
 
 
+Wrap your app in TennisiMDSWrapper
 ```js
-import { multiply } from 'react-native-tennisi-mobile-ds';
+import { TennisiMDSWrapper } from 'react-native-tennisi-mobile-ds';
 
-// ...
+export default function App() {
+  return (
+    <TennisiMDSWrapper>
+      <YourAppComponent />
+    </TennisiMDSWrapper>
+  );
+}
+```
 
-const result = await multiply(3, 7);
+```js
+import { useAppTheme } from 'react-native-tennisi-mobile-ds';
+
+export default function YourAppComponent() {
+  const { colors, spacing } = useAppTheme();
+  return (
+    <Text style={{color: colors.textBrand, marginBottom: spacing.x4}}>
+      Hello World
+    </Text>
+  );
+}
 ```
 
 
