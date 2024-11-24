@@ -184,5 +184,8 @@
     "languages": "js",
     "type": "library",
     "version": "0.44.2"
+  },
+  "dependencies": {
+    "react-native-toast-message": "^2.2.1"
   }
 }
