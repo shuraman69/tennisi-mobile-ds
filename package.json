@@ -141,7 +141,8 @@
           "trailingComma": "es5",
           "useTabs": false
         }
-      ]
+      ],
+      "react-hooks/exhaustive-deps": "warn"
     }
   },
   "eslintIgnore": [
@@ -186,6 +187,7 @@
     "version": "0.44.2"
   },
   "dependencies": {
+    "@shopify/restyle": "^2.4.4",
     "react-native-toast-message": "^2.2.1"
   }
 }

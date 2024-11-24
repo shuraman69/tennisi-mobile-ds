@@ -5,15 +5,23 @@ import {
   CurrencyEuroIcon,
   CurrencyRubelIcon,
   multiply,
+  TennisiMDSWrapper,
 } from 'react-native-tennisi-mobile-ds';
 
 export default function App() {
+  return (
+    <TennisiMDSWrapper>
+      <Entry />
+    </TennisiMDSWrapper>
+  );
+}
+
+const Entry = () => {
   const [result, setResult] = useState<number | undefined>();
 
   useEffect(() => {
     multiply(3, 7).then(setResult);
   }, []);
-
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
@@ -22,7 +30,7 @@ export default function App() {
       <CurrencyDollarIcon />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
