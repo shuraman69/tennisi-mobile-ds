@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import {
+  AnimatedHorizontalSlider,
   CurrencyDollarIcon,
   CurrencyEuroIcon,
   CurrencyRubelIcon,
@@ -35,6 +36,13 @@ const Entry = () => {
       <CurrencyRubelIcon />
       <CurrencyDollarIcon />
       <AnimatedStyleUpdateExample />
+      <AnimatedHorizontalSlider
+        data={[1, 2, 3]}
+        renderItem={(_, index) => (
+          <Text style={{ width: 200, backgroundColor: 'green' }}>{index}</Text>
+        )}
+        itemWidth={200}
+      />
     </View>
   );
 };
@@ -69,8 +77,6 @@ function AnimatedStyleUpdateExample() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   box: {
     width: 60,
