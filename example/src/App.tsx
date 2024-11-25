@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
 import {
   AnimatedHorizontalSlider,
-  CurrencyDollarIcon,
-  CurrencyEuroIcon,
-  CurrencyRubelIcon,
-  multiply,
+  Badge,
+  BetButton,
+  Box,
+  Button,
+  Card,
+  CheckBox,
+  SIZE,
   TennisiMDSWrapper,
+  Text,
+  HorizontalSlider,
+  CodeInput,
+  Counter,
 } from 'react-native-tennisi-mobile-ds';
-import Animated, {
-  Easing,
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
-} from 'react-native-reanimated';
+import { useState } from 'react';
 
 export default function App() {
   return (
@@ -24,64 +24,62 @@ export default function App() {
 }
 
 const Entry = () => {
-  const [result, setResult] = useState<number | undefined>();
-
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const [code, setCode] = useState('');
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-      <CurrencyEuroIcon />
-      <CurrencyRubelIcon />
-      <CurrencyDollarIcon />
-      <AnimatedStyleUpdateExample />
-      <AnimatedHorizontalSlider
-        data={[1, 2, 3]}
-        renderItem={(_, index) => (
-          <Text style={{ width: 200, backgroundColor: 'green' }}>{index}</Text>
-        )}
-        itemWidth={200}
-      />
-    </View>
+    <Box backgroundColor={'backgroundPrimary'} flex={1}>
+      <Box pt={'x12'} mt={'x4'} px={'x5'}>
+        <Box mx={'-x5'}>
+          <AnimatedHorizontalSlider
+            data={[1, 2, 3]}
+            renderItem={(_, index) => (
+              <Text
+                style={{
+                  width: SIZE.width * 0.9,
+                  height: 100,
+                  backgroundColor: 'green',
+                }}
+              >
+                {index}
+              </Text>
+            )}
+            itemWidth={SIZE.width * 0.9}
+          />
+          <HorizontalSlider
+            data={[1, 2, 3]}
+            renderItem={(_, index) => (
+              <Text
+                style={{
+                  width: SIZE.width * 0.9,
+                  height: 100,
+                  backgroundColor: 'gray',
+                }}
+              >
+                {index}
+              </Text>
+            )}
+          />
+        </Box>
+        <Text variant={'header-xxl'}>Text</Text>
+        <Text variant={'header-m'}>Text</Text>
+        <Text variant={'header-xs'}>Text</Text>
+        <Badge text={'Badge'} />
+        <Badge text={'Badge'} variant={'filled-s'} />
+        <Badge text={'Badge'} variant={'filled-m'} />
+        <Card
+          variant={'bordered'}
+          alignSelf={'stretch'}
+          height={100}
+          alignItems={'center'}
+          justifyContent={'center'}
+        >
+          <Text>CARD</Text>
+        </Card>
+        <BetButton title={'Title'} value={'Value'} />
+        <Button label={'123'} />
+        <CheckBox checked={true} onValueChange={() => {}} label={'Checkbox'} />
+        <CodeInput value={code} onChange={setCode} />
+        <Counter text={'Counter'} />
+      </Box>
+    </Box>
   );
 };
-
-function AnimatedStyleUpdateExample() {
-  const randomWidth = useSharedValue(10);
-
-  const config = {
-    duration: 500,
-    easing: Easing.bezier(0.5, 0.01, 0, 1),
-  };
-
-  const style = useAnimatedStyle(() => {
-    return {
-      width: withTiming(randomWidth.value, config),
-    };
-  });
-
-  return (
-    <View style={styles.container}>
-      <Animated.View style={[styles.box, style]} />
-      <Button
-        title="toggle"
-        onPress={() => {
-          randomWidth.value = Math.random() * 350;
-        }}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-    backgroundColor: 'red',
-  },
-});
