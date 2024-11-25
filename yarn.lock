@@ -11970,7 +11970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:^3.16.2":
+"react-native-reanimated@npm:^3.14.0, react-native-reanimated@npm:^3.16.2":
   version: 3.16.2
   resolution: "react-native-reanimated@npm:3.16.2"
   dependencies:
@@ -12063,13 +12063,13 @@ __metadata:
     react: 18.3.1
     react-native: 0.76.3
     react-native-builder-bob: ^0.33.1
+    react-native-reanimated: ^3.14.0
     react-native-toast-message: ^2.2.1
     release-it: ^17.10.0
     typescript: ^5.2.2
   peerDependencies:
     react: "*"
     react-native: "*"
-    react-native-reanimated: ^3.14.0
     react-native-svg: "*"
   languageName: unknown
   linkType: soft

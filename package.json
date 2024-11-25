@@ -89,7 +89,6 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-reanimated": "^3.14.0",
     "react-native-svg": "*"
   },
   "workspaces": [
@@ -189,6 +188,7 @@
   },
   "dependencies": {
     "@shopify/restyle": "^2.4.4",
+    "react-native-reanimated": "^3.14.0",
     "react-native-toast-message": "^2.2.1"
   }
 }
