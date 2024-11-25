@@ -89,6 +89,7 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
+    "react-native-reanimated": "^3.14.0",
     "react-native-svg": "*"
   },
   "workspaces": [

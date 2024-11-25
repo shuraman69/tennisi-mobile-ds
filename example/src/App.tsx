@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import {
   CurrencyDollarIcon,
   CurrencyEuroIcon,
@@ -7,6 +7,12 @@ import {
   multiply,
   TennisiMDSWrapper,
 } from 'react-native-tennisi-mobile-ds';
+import Animated, {
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 
 export default function App() {
   return (
@@ -28,9 +34,37 @@ const Entry = () => {
       <CurrencyEuroIcon />
       <CurrencyRubelIcon />
       <CurrencyDollarIcon />
+      <AnimatedStyleUpdateExample />
     </View>
   );
 };
+
+function AnimatedStyleUpdateExample() {
+  const randomWidth = useSharedValue(10);
+
+  const config = {
+    duration: 500,
+    easing: Easing.bezier(0.5, 0.01, 0, 1),
+  };
+
+  const style = useAnimatedStyle(() => {
+    return {
+      width: withTiming(randomWidth.value, config),
+    };
+  });
+
+  return (
+    <View style={styles.container}>
+      <Animated.View style={[styles.box, style]} />
+      <Button
+        title="toggle"
+        onPress={() => {
+          randomWidth.value = Math.random() * 350;
+        }}
+      />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -42,5 +76,6 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     marginVertical: 20,
+    backgroundColor: 'red',
   },
 });
