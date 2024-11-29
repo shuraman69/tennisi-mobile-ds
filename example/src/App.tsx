@@ -18,6 +18,7 @@ import {
   RadioGroup,
   SegmentedControl,
   Switch,
+  TeamPlayerCard,
 } from 'react-native-tennisi-mobile-ds';
 import { useState } from 'react';
 import { ScrollView } from 'react-native';
@@ -113,6 +114,14 @@ const Entry = () => {
           <MatchResultCard />
           <SegmentedControl values={['1', '2', '3']} />
           <Switch description={'Description'} value={true} />
+          <TeamPlayerCard
+            image={{
+              uri: 'https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp',
+            }}
+            name={'Name Yol'}
+            position={'Position'}
+            onPress={() => {}}
+          />
         </Box>
       </ScrollView>
     </Box>
