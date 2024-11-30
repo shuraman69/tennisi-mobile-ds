@@ -38,8 +38,8 @@ export const SegmentedControl = ({
       style={styles[variant]}
       fontStyle={{ color: theme.colors.textSecondary }}
       activeFontStyle={{ color: theme.colors.textPrimary }}
-      // backgroundColor={theme.colors.controlsTertiary}
-      tintColor={theme.colors.controlsBrand}
+      backgroundColor={theme.colors.controlsTertiary}
+      tintColor={theme.colors.controlsQuaternary}
     />
   );
 };
