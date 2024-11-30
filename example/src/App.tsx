@@ -59,6 +59,7 @@ const Entry = () => {
                 'https://thumbs.dreamstime.com/b/falling-drop-rain-blue-earth-image-water-splash-crown-shape-water-splash-crown-shape-falling-drop-earth-140453719.jpg'
               }
             />
+
             <HorizontalSlider
               data={[1, 2, 3]}
               renderItem={(_, index) => (

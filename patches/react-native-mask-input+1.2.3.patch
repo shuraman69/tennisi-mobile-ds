@@ -1,0 +1,61 @@
+diff --git a/node_modules/react-native-mask-input/lib/typescript/src/Masks.d.ts b/node_modules/react-native-mask-input/lib/typescript/src/Masks.d.ts
+index 048d40c..0c18b6c 100644
+--- a/node_modules/react-native-mask-input/lib/typescript/src/Masks.d.ts
++++ b/node_modules/react-native-mask-input/lib/typescript/src/Masks.d.ts
+@@ -12,5 +12,6 @@ declare const _default: {
+     DATE_MMDDYYYY: (value?: string | undefined) => MaskArray;
+     DATE_YYYYMMDD: (value?: string | undefined) => MaskArray;
+     ZIP_CODE: (string | RegExp)[];
++    RU_PHONE: (string | RegExp)[];
+ };
+ export default _default;
+diff --git a/node_modules/react-native-mask-input/src/Masks.ts b/node_modules/react-native-mask-input/src/Masks.ts
+index 5e175b5..5f0dafd 100644
+--- a/node_modules/react-native-mask-input/src/Masks.ts
++++ b/node_modules/react-native-mask-input/src/Masks.ts
+@@ -134,10 +134,10 @@ const DATE_DDMMYYYY: Mask = (text = '') => {
+   return [
+     /[0-3]/,
+     secondDigitDayMask,
+-    '/',
++    '.',
+     /[0-1]/,
+     secondDigitMonthMask,
+-    '/',
++    '.',
+     /\d/,
+     /\d/,
+     /\d/,
+@@ -217,6 +217,26 @@ const DATE_YYYYMMDD: Mask = (text = '') => {
+ 
+ const ZIP_CODE = [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
+ 
++const RU_PHONE = [
++  '+',
++  '7',
++  ' ',
++  '(',
++  /\d/,
++  /\d/,
++  /\d/,
++  ')',
++  ' ',
++  /\d/,
++  /\d/,
++  /\d/,
++  '-',
++  /\d/,
++  /\d/,
++  '-',
++  /\d/,
++  /\d/,
++];
+ export default {
+   BRL_CAR_PLATE,
+   BRL_CNPJ,
+@@ -230,4 +250,5 @@ export default {
+   DATE_MMDDYYYY,
+   DATE_YYYYMMDD,
+   ZIP_CODE,
++  RU_PHONE,
+ };
