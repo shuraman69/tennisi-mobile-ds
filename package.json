@@ -195,6 +195,7 @@
     "lodash": "^4.17.21",
     "react-native-radio-buttons-group": "^3.1.0",
     "react-native-reanimated": "^3.14.0",
+    "react-native-shimmer-placeholder": "^2.0.9",
     "react-native-svg": "^15.9.0",
     "react-native-toast-message": "^2.2.1"
   }

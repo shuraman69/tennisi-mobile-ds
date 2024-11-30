@@ -2,10 +2,11 @@ import { StyleSheet } from 'react-native';
 import RNSegmentedControl, {
   SegmentedControlProps,
 } from '@react-native-segmented-control/segmented-control';
-// import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import { useAppTheme } from '../mds';
-import { TestIds } from '../config';
+import { SIZE, TestIds } from '../config';
 import { Box } from './Box';
+import { Skeleton } from './Skeleton';
+import { AnimatedBox } from './AnimatedBox';
 
 export const SegmentedControl = ({
   variant = 's',
@@ -22,24 +23,29 @@ export const SegmentedControl = ({
   if (loading) {
     return (
       <Box testID={TestIds.SEGMENTED_CONTROL.LOADING}>
-        {/*<SkeletonPlaceholder*/}
-        {/*  speed={1500}*/}
-        {/*  backgroundColor={theme.colors.controlsSkeleton}*/}
-        {/*  borderRadius={8}>*/}
-        {/*  <SkeletonPlaceholder.Item height={styles[variant].height} />*/}
-        {/*</SkeletonPlaceholder>*/}
+        <AnimatedBox fadeLayout>
+          <Skeleton
+            width={SIZE.width - theme.spacing.x10}
+            height={styles[variant].height}
+            style={{
+              borderRadius: theme.borderRadii.m,
+            }}
+          />
+        </AnimatedBox>
       </Box>
     );
   }
   return (
-    <RNSegmentedControl
-      {...props}
-      testID={TestIds.SEGMENTED_CONTROL.CONTAINER}
-      style={styles[variant]}
-      fontStyle={{ color: theme.colors.textSecondary }}
-      activeFontStyle={{ color: theme.colors.textPrimary }}
-      backgroundColor={theme.colors.controlsTertiary}
-      tintColor={theme.colors.controlsQuaternary}
-    />
+    <AnimatedBox style={styles[variant]} fadeLayout>
+      <RNSegmentedControl
+        {...props}
+        testID={TestIds.SEGMENTED_CONTROL.CONTAINER}
+        style={styles[variant]}
+        fontStyle={{ color: theme.colors.textSecondary }}
+        activeFontStyle={{ color: theme.colors.textPrimary }}
+        backgroundColor={theme.colors.controlsTertiary}
+        tintColor={theme.colors.controlsQuaternary}
+      />
+    </AnimatedBox>
   );
 };

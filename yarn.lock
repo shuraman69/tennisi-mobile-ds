@@ -12046,6 +12046,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-shimmer-placeholder@npm:^2.0.9":
+  version: 2.0.9
+  resolution: "react-native-shimmer-placeholder@npm:2.0.9"
+  peerDependencies:
+    prop-types: ">=15.6.0"
+    react-native-linear-gradient: ">=2.4.0"
+  checksum: 72ef49877c66994acbae7be2e810aef20ced6301b5146c36f671876525d8904e3810af69e277ffe390f05925021f44e3dd16ea04f7e3782ca57610d36d723d54
+  languageName: node
+  linkType: hard
+
 "react-native-svg-transformer@npm:^1.5.0":
   version: 1.5.0
   resolution: "react-native-svg-transformer@npm:1.5.0"
@@ -12138,6 +12148,7 @@ __metadata:
     react-native-builder-bob: ^0.33.1
     react-native-radio-buttons-group: ^3.1.0
     react-native-reanimated: ^3.14.0
+    react-native-shimmer-placeholder: ^2.0.9
     react-native-svg: ^15.9.0
     react-native-toast-message: ^2.2.1
     release-it: ^17.10.0

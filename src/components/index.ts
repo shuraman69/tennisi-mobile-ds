@@ -21,3 +21,4 @@ export * from './Switch';
 export * from './TabItemBig';
 export * from './SvgGrayFilter';
 export * from './TeamPlayerCard';
+export * from './Skeleton';

@@ -90,6 +90,7 @@ const Entry = () => {
             onValueChange={() => {}}
             label={'Checkbox'}
           />
+          <SegmentedControl values={['1', '2', '3']} loading={false} />
           <CodeInput value={code} onChange={setCode} />
           <Counter text={'Counter'} />
           <MatchBanner buttons />
@@ -112,7 +113,6 @@ const Entry = () => {
             ]}
           />
           <MatchResultCard />
-          <SegmentedControl values={['1', '2', '3']} />
           <Switch description={'Description'} value={true} />
           <TeamPlayerCard
             image={{
