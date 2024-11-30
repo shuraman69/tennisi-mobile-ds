@@ -22,3 +22,4 @@ export * from './TabItemBig';
 export * from './SvgGrayFilter';
 export * from './TeamPlayerCard';
 export * from './Skeleton';
+export * from './Chips';
