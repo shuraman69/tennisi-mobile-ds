@@ -19,6 +19,7 @@ import {
   SegmentedControl,
   Switch,
   TeamPlayerCard,
+  Avatar,
 } from 'react-native-tennisi-mobile-ds';
 import { useState } from 'react';
 import { ScrollView } from 'react-native';
@@ -52,6 +53,11 @@ const Entry = () => {
                 </Text>
               )}
               itemWidth={SIZE.width * 0.9}
+            />
+            <Avatar
+              imageSource={
+                'https://thumbs.dreamstime.com/b/falling-drop-rain-blue-earth-image-water-splash-crown-shape-water-splash-crown-shape-falling-drop-earth-140453719.jpg'
+              }
             />
             <HorizontalSlider
               data={[1, 2, 3]}

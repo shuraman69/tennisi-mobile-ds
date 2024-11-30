@@ -23,3 +23,4 @@ export * from './SvgGrayFilter';
 export * from './TeamPlayerCard';
 export * from './Skeleton';
 export * from './Chips';
+export * from './Avatar';
