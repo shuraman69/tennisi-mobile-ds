@@ -27,3 +27,4 @@ export * from './Avatar';
 export * from './TextField';
 export * from './PhoneMaskedTextField';
 export * from './DateMaskedTextField';
+export * from './Textarea';

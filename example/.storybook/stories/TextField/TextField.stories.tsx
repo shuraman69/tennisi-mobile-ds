@@ -4,7 +4,7 @@ import {
   Box,
   DateMaskedTextField,
   PhoneMaskedTextField,
-  // Textarea,
+  Textarea,
   TextField,
 } from 'react-native-tennisi-mobile-ds';
 import {TextFieldDocs} from '../../docs';
@@ -78,18 +78,18 @@ export const DateMasked: StoryObj<typeof DateMaskedTextField> = {
   },
 };
 
-// export const TextArea: StoryObj<typeof DateMaskedTextField> = {
-//   args: {
-//     placeholder: 'Text area placeholder',
-//     label: 'This is a text area',
-//   },
-//   render: function Render(args) {
-//     const [{value}, updateArgs] = useArgs();
-//
-//     function onChangeText(text: string) {
-//       updateArgs({value: text});
-//     }
-//
-//     return <Textarea {...args} onChangeText={onChangeText} />;
-//   },
-// };
+export const TextArea: StoryObj<typeof TextField> = {
+  args: {
+    placeholder: 'Text area placeholder',
+    label: 'This is a text area',
+  },
+  render: function Render(args) {
+    const [{value}, updateArgs] = useArgs();
+
+    function onChangeText(text: string) {
+      updateArgs({value: text});
+    }
+
+    return <Textarea {...args} onChangeText={onChangeText} />;
+  },
+};
