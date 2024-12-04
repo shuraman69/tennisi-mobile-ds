@@ -13,7 +13,6 @@ import {
   VariantProps,
   BoxProps,
 } from '@shopify/restyle';
-import { impactAsync, ImpactFeedbackStyle } from 'expo-haptics';
 import { TennisiTheme, useAppTheme } from '../mds';
 import { TestIds } from '../config';
 import { Text } from './Text';
@@ -21,6 +20,7 @@ import { Box } from './Box';
 import { useButtonTextProps } from './hooks';
 import { Row } from './Row';
 import { IS_IOS } from '../config';
+import { HapticsService } from '../utils';
 
 type RestyleProps = BoxProps<TennisiTheme> &
   VariantProps<TennisiTheme, 'buttonVariants'>;
@@ -52,7 +52,7 @@ export const Button = ({
   const props = useRestyle(restyleFunctions, rest);
   const textProps = useButtonTextProps(rest.variant ?? 'accent-l');
   const onPress = useCallback(() => {
-    impactAsync(ImpactFeedbackStyle.Light);
+    HapticsService.impact('Light');
     props.onPress?.();
   }, [props.onPress]);
   const isDisabled = loading || disabled || touchableProps?.disabled;
