@@ -1,6 +1,6 @@
 {
-  "name": "react-native-tennisi-mobile-ds",
-  "version": "0.1.1",
+  "name": "tennisi-mobile-ds",
+  "version": "0.1.4",
   "description": "Tennisi Mobile App Design System",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -65,13 +65,18 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
+    "@babel/plugin-transform-flow-strip-types": "^7.25.9",
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
+    "@react-native/babel-preset": "^0.76.3",
     "@react-native/eslint-config": "^0.73.1",
     "@release-it/conventional-changelog": "^9.0.2",
-    "@types/jest": "^29.5.5",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.9.0",
+    "@types/jest": "^29.5.14",
     "@types/lodash": "^4.17.13",
     "@types/react": "^18.2.44",
+    "@types/react-native": "^0.73.0",
     "commitlint": "^17.0.2",
     "del-cli": "^5.1.0",
     "eslint": "^8.51.0",
@@ -83,7 +88,9 @@
     "react": "18.3.1",
     "react-native": "0.76.3",
     "react-native-builder-bob": "^0.33.1",
+    "react-test-renderer": "^18.3.1",
     "release-it": "^17.10.0",
+    "ts-jest": "^29.2.5",
     "typescript": "^5.2.2"
   },
   "resolutions": {
@@ -97,13 +104,6 @@
     "example"
   ],
   "packageManager": "yarn@3.6.1",
-  "jest": {
-    "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
-    ]
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
