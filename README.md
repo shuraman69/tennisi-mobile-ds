@@ -1,52 +1,67 @@
-# react-native-tennisi-mobile-ds
+### Установка и настройка `tennisi-mobile-ds`
 
-Tennisi Mobile App Design System
-
-## Installation
-
-```sh
-npm install react-native-tennisi-mobile-ds
-```
-#### - Install [react-native-svg](https://www.npmjs.com/package/react-native-svg) & [react-native-svg-transformer](https://github.com/kristerkari/react-native-svg-transformer) packages
-
-## Usage
-
-
-Wrap your app in TennisiMDSWrapper
-```js
-import { TennisiMDSWrapper } from 'react-native-tennisi-mobile-ds';
-
-export default function App() {
-  return (
-    <TennisiMDSWrapper>
-      <YourAppComponent />
-    </TennisiMDSWrapper>
-  );
-}
-```
-
-```js
-import { useAppTheme } from 'react-native-tennisi-mobile-ds';
-
-export default function YourAppComponent() {
-  const { colors, spacing } = useAppTheme();
-  return (
-    <Text style={{color: colors.textBrand, marginBottom: spacing.x4}}>
-      Hello World
-    </Text>
-  );
-}
-```
-
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
+`tennisi-mobile-ds` — это библиотека компонентов и дизайн-системы для мобильного приложения Tennisi Mobile App, созданная на основе React Native.
 
 ---
 
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+### **Шаг 1: Установка пакета**
+Установите пакет через `npm` или `yarn`:
+
+#### Используя `npm`:
+```bash
+npm install tennisi-mobile-ds
+```
+
+#### Используя `yarn`:
+```bash
+yarn add tennisi-mobile-ds
+```
+
+---
+
+### **Шаг 2: Установка peer-зависимостей**
+Для корректной работы библиотеки убедитесь, что вы установили все необходимые peer-зависимости:
+
+```bash
+expo install @react-native-segmented-control/segmented-control expo-blur expo-haptics expo-linear-gradient react-native-reanimated react-native-svg
+```
+
+---
+
+### **Шаг 3: Настройка iOS (CocoaPods)**
+Для работы `expo-haptics` и других зависимостей на iOS необходимо выполнить установку CocoaPods:
+
+1. Перейдите в папку `ios` вашего проекта:
+   ```bash
+   cd ios
+   ```
+
+2. Выполните команду `pod install`:
+   ```bash
+   pod install
+   ```
+
+3. Вернитесь в корневую папку проекта:
+   ```bash
+   cd ..
+   ```
+
+---
+
+### **Шаг 4: Настройка Reanimated**
+`react-native-reanimated` требует дополнительной настройки: инструкции можно найти [здесь](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/)
+
+---
+
+### **Шаг 5: Использование библиотеки**
+Теперь вы можете импортировать компоненты из `tennisi-mobile-ds` и использовать их в своем проекте:
+
+```javascript
+import { YourComponent } from 'tennisi-mobile-ds';
+
+export default function App() {
+  return <YourComponent />;
+}
+```
+
+---
