@@ -20,7 +20,7 @@ import {
   Switch,
   TeamPlayerCard,
   Avatar,
-} from 'react-native-tennisi-mobile-ds';
+} from 'tennisi-mobile-ds';
 import { useState } from 'react';
 import { ScrollView } from 'react-native';
 
