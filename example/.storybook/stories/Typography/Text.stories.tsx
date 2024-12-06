@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {Box, Text, TennisiV1Light} from 'react-native-tennisi-mobile-ds';
+import {Box, Text, TennisiV1Light} from 'tennisi-mobile-ds';
 import {TextDocs} from '../../docs';
 
 const textVariants = Object.keys(TennisiV1Light.textVariants);

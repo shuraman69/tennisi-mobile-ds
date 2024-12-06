@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import { SegmentedControl } from 'react-native-tennisi-mobile-ds';
+import { SegmentedControl } from 'tennisi-mobile-ds';
 import { useArgs } from '@storybook/preview-api';
 
 const SegmentedControlMeta: Meta<typeof SegmentedControl> = {

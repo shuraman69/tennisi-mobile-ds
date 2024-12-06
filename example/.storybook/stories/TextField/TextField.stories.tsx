@@ -6,7 +6,7 @@ import {
   PhoneMaskedTextField,
   Textarea,
   TextField,
-} from 'react-native-tennisi-mobile-ds';
+} from 'tennisi-mobile-ds';
 import {TextFieldDocs} from '../../docs';
 import {useArgs} from '@storybook/preview-api';
 

@@ -1,7 +1,7 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
 import {useArgs} from '@storybook/preview-api';
-import {RadioGroup} from 'react-native-tennisi-mobile-ds';
+import {RadioGroup} from 'tennisi-mobile-ds';
 import {RadioGroupDocs} from '../../docs';
 
 const RadioGroupMeta: Meta<typeof RadioGroup> = {

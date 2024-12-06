@@ -13250,39 +13250,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-tennisi-mobile-ds-example@workspace:example":
-  version: 0.0.0-use.local
-  resolution: "react-native-tennisi-mobile-ds-example@workspace:example"
-  dependencies:
-    "@babel/core": ^7.20.0
-    "@expo/metro-runtime": ~4.0.0
-    "@gorhom/bottom-sheet": ^5.0.6
-    "@react-native-async-storage/async-storage": ^2.1.0
-    "@react-native-community/datetimepicker": ^8.2.0
-    "@react-native-community/slider": ^4.5.5
-    "@react-native-segmented-control/segmented-control": ^2.5.6
-    "@storybook/addon-ondevice-actions": ^8.4.2
-    "@storybook/addon-ondevice-controls": ^8.4.2
-    "@storybook/react-native": ^8.4.2
-    babel-loader: ^8.4.1
-    expo: ~52.0.11
-    expo-blur: ^14.0.1
-    expo-haptics: ^14.0.0
-    expo-linear-gradient: ^14.0.1
-    expo-status-bar: ~2.0.0
-    react: 18.3.1
-    react-dom: 18.3.1
-    react-native: 0.76.3
-    react-native-builder-bob: ^0.33.1
-    react-native-gesture-handler: ^2.21.2
-    react-native-reanimated: ^3.16.3
-    react-native-safe-area-context: ^4.14.0
-    react-native-svg: ^15.10.0
-    react-native-svg-transformer: ^1.5.0
-    react-native-web: ~0.19.13
-  languageName: unknown
-  linkType: soft
-
 "react-native-toast-message@npm:^2.2.1":
   version: 2.2.1
   resolution: "react-native-toast-message@npm:2.2.1"
@@ -15039,6 +15006,39 @@ __metadata:
   checksum: 265652f94eed077c311777e0290c4b4f3ec670c71c62c979efcbbd67ee506d677ff2741a72d7160556e9b0fba8fc5fbd7b3c482ac94c8acc48d85411f1f079c3
   languageName: node
   linkType: hard
+
+"tennisi-mobile-ds-example@workspace:example":
+  version: 0.0.0-use.local
+  resolution: "tennisi-mobile-ds-example@workspace:example"
+  dependencies:
+    "@babel/core": ^7.20.0
+    "@expo/metro-runtime": ~4.0.0
+    "@gorhom/bottom-sheet": ^5.0.6
+    "@react-native-async-storage/async-storage": ^2.1.0
+    "@react-native-community/datetimepicker": ^8.2.0
+    "@react-native-community/slider": ^4.5.5
+    "@react-native-segmented-control/segmented-control": ^2.5.6
+    "@storybook/addon-ondevice-actions": ^8.4.2
+    "@storybook/addon-ondevice-controls": ^8.4.2
+    "@storybook/react-native": ^8.4.2
+    babel-loader: ^8.4.1
+    expo: ~52.0.11
+    expo-blur: ^14.0.1
+    expo-haptics: ^14.0.0
+    expo-linear-gradient: ^14.0.1
+    expo-status-bar: ~2.0.0
+    react: 18.3.1
+    react-dom: 18.3.1
+    react-native: 0.76.3
+    react-native-builder-bob: ^0.33.1
+    react-native-gesture-handler: ^2.21.2
+    react-native-reanimated: ^3.16.3
+    react-native-safe-area-context: ^4.14.0
+    react-native-svg: ^15.10.0
+    react-native-svg-transformer: ^1.5.0
+    react-native-web: ~0.19.13
+  languageName: unknown
+  linkType: soft
 
 "tennisi-mobile-ds@workspace:.":
   version: 0.0.0-use.local

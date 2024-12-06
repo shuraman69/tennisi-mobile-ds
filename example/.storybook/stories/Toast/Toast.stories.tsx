@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {Button, ToastService} from 'react-native-tennisi-mobile-ds';
+import {Button, ToastService} from 'tennisi-mobile-ds';
 import {ToastDocs} from '../../docs';
 
 const ToastMeta: Meta<typeof Button> = {

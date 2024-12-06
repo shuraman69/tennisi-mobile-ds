@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {TennisiV1Light, BetButton, Box} from 'react-native-tennisi-mobile-ds';
+import {TennisiV1Light, BetButton, Box} from 'tennisi-mobile-ds';
 import {BetButtonDocs} from '../../docs';
 
 const BetButtonMeta: Meta<typeof BetButton> = {

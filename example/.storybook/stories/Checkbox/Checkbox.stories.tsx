@@ -1,7 +1,7 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
 import {useArgs} from '@storybook/preview-api';
-import {CheckBox} from 'react-native-tennisi-mobile-ds';
+import {CheckBox} from 'tennisi-mobile-ds';
 import {CheckboxDocs} from '../../docs';
 
 const CheckboxMeta: Meta<typeof CheckBox> = {

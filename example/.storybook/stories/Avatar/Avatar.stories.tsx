@@ -1,7 +1,7 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
 import {AvatarDocs} from '../../docs';
-import { Avatar } from 'react-native-tennisi-mobile-ds';
+import { Avatar } from 'tennisi-mobile-ds';
 
 const AvatarMeta: Meta<typeof Avatar> = {
   title: 'Avatar',

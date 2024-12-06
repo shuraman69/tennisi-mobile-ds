@@ -1,6 +1,6 @@
 import {ScrollView} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {Box, CodeInput} from 'react-native-tennisi-mobile-ds';
+import {Box, CodeInput} from 'tennisi-mobile-ds';
 import {CodeInputDocs} from '../../docs';
 import {useArgs} from '@storybook/preview-api';
 

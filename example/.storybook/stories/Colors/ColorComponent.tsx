@@ -1,4 +1,4 @@
-import {Box, Row, Text, TennisiTheme, useAppTheme, SIZE, getRestyleProps} from 'react-native-tennisi-mobile-ds';
+import {Box, Row, Text, TennisiTheme, useAppTheme, SIZE, getRestyleProps} from 'tennisi-mobile-ds';
 
 export const ColorComponent = () => {
   const {colors} = useAppTheme();

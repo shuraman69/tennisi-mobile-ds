@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import { Box, TennisiV1Dark, TennisiV1Light, ToastWrapper } from 'react-native-tennisi-mobile-ds';
+import { Box, TennisiV1Dark, TennisiV1Light, ToastWrapper } from 'tennisi-mobile-ds';
 import { ThemeProvider } from '@shopify/restyle';
 
 const preview: Preview = {

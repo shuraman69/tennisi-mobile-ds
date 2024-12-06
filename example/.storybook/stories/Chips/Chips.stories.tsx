@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {Button, Chips, ChipProps} from 'react-native-tennisi-mobile-ds';
+import {Button, Chips, ChipProps} from 'tennisi-mobile-ds';
 import {useArgs} from '@storybook/preview-api';
 
 function makeLabel(length: number) {

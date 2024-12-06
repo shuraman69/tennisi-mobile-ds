@@ -1,7 +1,7 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
 import {useArgs} from '@storybook/preview-api';
-import {Switch} from 'react-native-tennisi-mobile-ds';
+import {Switch} from 'tennisi-mobile-ds';
 const SwitchMeta: Meta<typeof Switch> = {
   title: 'Switch',
   component: Switch,

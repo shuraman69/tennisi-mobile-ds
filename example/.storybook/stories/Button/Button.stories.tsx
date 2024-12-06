@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {TennisiV1Light, Button, CaseIcon, CheckIcon, FireIcon} from 'react-native-tennisi-mobile-ds';
+import {TennisiV1Light, Button, CaseIcon, CheckIcon, FireIcon} from 'tennisi-mobile-ds';
 import {useArgs} from '@storybook/preview-api';
 import {ButtonDocs} from '../../docs';
 

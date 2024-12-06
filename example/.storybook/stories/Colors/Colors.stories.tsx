@@ -1,6 +1,6 @@
 import {ScrollView} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {Button} from 'react-native-tennisi-mobile-ds';
+import {Button} from 'tennisi-mobile-ds';
 import {ColorComponent} from './ColorComponent';
 
 const MyButtonMeta: Meta<typeof ColorComponent> = {

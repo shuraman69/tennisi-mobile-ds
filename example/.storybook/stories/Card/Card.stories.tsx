@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {Card} from 'react-native-tennisi-mobile-ds';
+import {Card} from 'tennisi-mobile-ds';
 import {CardTemplate} from './CardTemplate';
 import {CardDocs} from '../../docs';
 

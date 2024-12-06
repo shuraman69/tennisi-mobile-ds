@@ -1,4 +1,4 @@
-import {Card, Text} from 'react-native-tennisi-mobile-ds';
+import {Card, Text} from 'tennisi-mobile-ds';
 import {Meta} from '@storybook/react';
 
 export const CardTemplate = (props: Meta<typeof Card>) => {

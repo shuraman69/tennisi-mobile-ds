@@ -1,7 +1,7 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
 import {useArgs} from '@storybook/preview-api';
-import {NotificationAlert} from 'react-native-tennisi-mobile-ds';
+import {NotificationAlert} from 'tennisi-mobile-ds';
 
 const NotificationAlertMeta: Meta<typeof NotificationAlert> = {
   title: 'NotificationAlert',
