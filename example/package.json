@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "storybook-generate": "sb-rn-get-stories",
+    "sb:web": "expo start --web"
   },
   "dependencies": {
     "@expo/metro-runtime": "~4.0.0",
@@ -22,12 +24,21 @@
     "react-native-reanimated": "^3.16.3",
     "react-native-svg": "^15.10.0",
     "react-native-svg-transformer": "^1.5.0",
-    "react-native-toast-message": "^2.2.1",
     "react-native-web": "~0.19.13"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "react-native-builder-bob": "^0.33.1"
+    "@gorhom/bottom-sheet": "^5.0.6",
+    "@react-native-async-storage/async-storage": "^2.1.0",
+    "@react-native-community/datetimepicker": "^8.2.0",
+    "@react-native-community/slider": "^4.5.5",
+    "@storybook/addon-ondevice-actions": "^8.4.2",
+    "@storybook/addon-ondevice-controls": "^8.4.2",
+    "@storybook/react-native": "^8.4.2",
+    "babel-loader": "^8.4.1",
+    "react-native-builder-bob": "^0.33.1",
+    "react-native-gesture-handler": "^2.21.2",
+    "react-native-safe-area-context": "^4.14.0"
   },
   "private": true
 }

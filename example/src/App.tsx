@@ -7,7 +7,6 @@ import {
   Card,
   CheckBox,
   SIZE,
-  TennisiMDSWrapper,
   Text,
   HorizontalSlider,
   CodeInput,
@@ -20,11 +19,15 @@ import {
   Switch,
   TeamPlayerCard,
   Avatar,
+  TennisiMDSWrapper,
 } from 'tennisi-mobile-ds';
 import { useState } from 'react';
 import { ScrollView } from 'react-native';
+import { StorybookUIRoot } from '../.storybook';
 
-export default function App() {
+let App = null;
+
+function AppEntry() {
   return (
     <TennisiMDSWrapper>
       <Entry />
@@ -32,6 +35,13 @@ export default function App() {
   );
 }
 
+if (1 < 2) {
+  App = StorybookUIRoot;
+} else {
+  App = AppEntry;
+}
+
+export default App;
 const Entry = () => {
   const [code, setCode] = useState('');
   return (

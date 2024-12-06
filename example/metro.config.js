@@ -2,6 +2,7 @@ const path = require('path');
 const { getDefaultConfig } = require('@expo/metro-config');
 const { getConfig } = require('react-native-builder-bob/metro-config');
 const pkg = require('../package.json');
+const withStorybook = require('@storybook/react-native/metro/withStorybook');
 
 const root = path.resolve(__dirname, '..');
 
@@ -11,29 +12,31 @@ const root = path.resolve(__dirname, '..');
  *
  * @type {import('metro-config').MetroConfig}
  */
-module.exports = getConfig(
-  (() => {
-    const config = getDefaultConfig(__dirname);
+module.exports = withStorybook(
+  getConfig(
+    (() => {
+      const config = getDefaultConfig(__dirname);
 
-    const { transformer, resolver } = config;
+      const { transformer, resolver } = config;
 
-    config.transformer = {
-      ...transformer,
-      babelTransformerPath: require.resolve(
-        'react-native-svg-transformer/expo'
-      ),
-    };
-    config.resolver = {
-      ...resolver,
-      assetExts: resolver.assetExts.filter((ext) => ext !== 'svg'),
-      sourceExts: [...resolver.sourceExts, 'svg'],
-    };
+      config.transformer = {
+        ...transformer,
+        babelTransformerPath: require.resolve(
+          'react-native-svg-transformer/expo'
+        ),
+      };
+      config.resolver = {
+        ...resolver,
+        assetExts: resolver.assetExts.filter((ext) => ext !== 'svg'),
+        sourceExts: [...resolver.sourceExts, 'svg'],
+      };
 
-    return config;
-  })(),
-  {
-    root,
-    pkg,
-    project: __dirname,
-  }
+      return config;
+    })(),
+    {
+      root,
+      pkg,
+      project: __dirname,
+    }
+  )
 );
