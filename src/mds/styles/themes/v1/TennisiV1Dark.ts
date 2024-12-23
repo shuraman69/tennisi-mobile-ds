@@ -12,6 +12,7 @@ export const TennisiV1Dark = createTheme<TennisiTheme>({
     backgroundSecondary: colors.white50,
     backgroundSecondaryInverted: colors.white100,
     backgroundTertiary: colors.neutrals750,
+    backgroundQuaternary: '#2D2D30',
     backgroundAlternative: colors.white1000,
 
     // Text colors

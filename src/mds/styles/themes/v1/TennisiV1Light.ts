@@ -18,6 +18,7 @@ export const TennisiV1Light = createTheme({
     backgroundSecondary: colors.neutrals50,
     backgroundSecondaryInverted: colors.black100,
     backgroundTertiary: colors.neutrals100,
+    backgroundQuaternary: '#2D2D30',
     backgroundAlternative: colors.neutrals900,
     backgroundSuccess: colors.success100,
     backgroundWarning: colors.warning100,
