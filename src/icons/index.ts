@@ -53,6 +53,7 @@ export { default as ExplosionIcon } from './game-icons_mine-explosion.svg';
 export { default as CupIcon } from './cup.svg';
 export { default as ArrowRightIcon } from './arrowright.svg';
 export { default as ArrowsDownUpIcon } from './arrows-down-up.svg';
+export { default as ChevronsDownIcon } from './chevrons-down.svg';
 
 export * from './footbal';
 export * from './sports';
