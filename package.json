@@ -1,6 +1,6 @@
 {
   "name": "tennisi-mobile-ds",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Tennisi Mobile App Design System",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
