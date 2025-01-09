@@ -19,6 +19,7 @@ export type RadioGroupProps = {
   selectedId?: string;
   onSelectedIdChange?: (id: string) => void;
   row?: boolean;
+  cards?: boolean;
 };
 
 export type NotificationAlertProps = {

@@ -13,6 +13,7 @@ const RadioGroupMeta: Meta<typeof RadioGroup> = {
   args: {
     selectedId: '0',
     row: true,
+    cards: false,
     buttons: [
       {
         label: 'lorem ipsum lorem',
