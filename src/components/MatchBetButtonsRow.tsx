@@ -69,6 +69,16 @@ export const MatchBetButtonsRow = ({
     borderTopEndRadius: 'l',
     mb: 'x1',
   });
+
+  const valueTestVariant = useMemo(
+    () =>
+      ({
+        s: 'default-l-semibold',
+        d: 'header-xs',
+      })[size || 'd'],
+    [size]
+  );
+
   const renderedButtons = useMemo(
     () =>
       buttons.map((b, index) => {
@@ -87,7 +97,7 @@ export const MatchBetButtonsRow = ({
                 <Text variant={'default-m-semibold'}>{b.title}</Text>
               </Box>
               <Box alignSelf={'flex-end'}>
-                <Text variant={'header-xs'}>{b.value}</Text>
+                <Text variant={valueTestVariant}>{b.value}</Text>
               </Box>
             </TouchableOpacity>
           </Card>
