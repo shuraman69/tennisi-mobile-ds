@@ -12,6 +12,13 @@ export const BlurBg = (
     androidBackgroundColor?: keyof (typeof TennisiV1Light)['colors'];
   }
 ) => {
+  const initialIntensity = props.intensity || 30;
+  const resultIntensity = IS_IOS
+    ? initialIntensity
+    : (initialIntensity || 0) >= 25
+      ? 25
+      : initialIntensity;
+
   if (!IS_IOS && props.androidTransparent) {
     return null;
   }
@@ -25,11 +32,11 @@ export const BlurBg = (
   }
   return (
     <BlurView
-      intensity={30}
       experimentalBlurMethod={'dimezisBlurView'}
       blurReductionFactor={1}
       tint={'dark'}
       {...props}
+      intensity={resultIntensity}
       style={StyleSheet.compose(StyleSheet.absoluteFill, props.style)}
     />
   );

@@ -1,6 +1,6 @@
 import { ComponentProps, useCallback, useMemo } from 'react';
 import { BoxProps } from '@shopify/restyle';
-import { TennisiV1Light } from '../mds';
+import { TennisiTheme, TennisiV1Light } from '../mds';
 import { getRestyleProps } from '../utils';
 import { Row } from './Row';
 import { Card } from './Card';
@@ -69,6 +69,19 @@ export const MatchBetButtonsRow = ({
     borderTopEndRadius: 'l',
     mb: 'x1',
   });
+
+  const valueTestVariant = useMemo(
+    () =>
+      ({
+        s: 'default-l-semibold',
+        d: 'header-xs',
+      })[size || 'd'] as Exclude<
+        keyof TennisiTheme['textVariants'],
+        'defaults'
+      >,
+    [size]
+  );
+
   const renderedButtons = useMemo(
     () =>
       buttons.map((b, index) => {
@@ -87,7 +100,7 @@ export const MatchBetButtonsRow = ({
                 <Text variant={'default-m-semibold'}>{b.title}</Text>
               </Box>
               <Box alignSelf={'flex-end'}>
-                <Text variant={'header-xs'}>{b.value}</Text>
+                <Text variant={valueTestVariant}>{b.value}</Text>
               </Box>
             </TouchableOpacity>
           </Card>

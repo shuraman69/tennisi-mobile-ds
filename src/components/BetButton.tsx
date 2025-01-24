@@ -91,7 +91,7 @@ export const BetButton = ({
             <>
               <Text
                 numberOfLines={1}
-                variant={'p-xs-semibold'}
+                variant={'p-s-semibold'}
                 color={textColor}
               >
                 {title}
