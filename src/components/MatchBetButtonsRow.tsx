@@ -1,6 +1,6 @@
 import { ComponentProps, useCallback, useMemo } from 'react';
 import { BoxProps } from '@shopify/restyle';
-import { TennisiV1Light } from '../mds';
+import { TennisiTheme, TennisiV1Light } from '../mds';
 import { getRestyleProps } from '../utils';
 import { Row } from './Row';
 import { Card } from './Card';
@@ -75,7 +75,10 @@ export const MatchBetButtonsRow = ({
       ({
         s: 'default-l-semibold',
         d: 'header-xs',
-      })[size || 'd'],
+      })[size || 'd'] as Exclude<
+        keyof TennisiTheme['textVariants'],
+        'defaults'
+      >,
     [size]
   );
 
