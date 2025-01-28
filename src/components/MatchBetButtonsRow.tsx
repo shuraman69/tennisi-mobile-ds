@@ -16,6 +16,7 @@ export const MatchBetButtonsRow = ({
   size = 'd',
   buttonBlurTint = 'default',
   buttonBlurIntensity = 20,
+  androidBlurEnabled,
 }: {
   lineTitle?: string;
   buttons: { title: string; value: string }[];
@@ -23,6 +24,7 @@ export const MatchBetButtonsRow = ({
   size?: 's' | 'd';
   buttonBlurTint?: 'default' | 'dark';
   buttonBlurIntensity?: number;
+  androidBlurEnabled?: boolean;
 }) => {
   const SIZE = useMemo(() => ({ d: 70, s: 56 })[size], [size]);
   const VARIANT = useCallback(
@@ -94,7 +96,11 @@ export const MatchBetButtonsRow = ({
             overflow={'hidden'}
             paddingHorizontal={'x3'}
           >
-            <BlurBg intensity={buttonBlurIntensity} tint={buttonBlurTint} />
+            <BlurBg
+              intensity={buttonBlurIntensity}
+              tint={buttonBlurTint}
+              androidEnabled={androidBlurEnabled}
+            />
             <TouchableOpacity style={{ width: '100%' }}>
               <Box alignSelf={'flex-start'}>
                 <Text variant={'default-m-semibold'}>{b.title}</Text>
