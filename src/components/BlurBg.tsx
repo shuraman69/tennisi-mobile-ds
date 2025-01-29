@@ -3,13 +3,13 @@ import { StyleSheet } from 'react-native';
 import { BlurView } from 'expo-blur';
 import { Box } from './Box';
 import { IS_IOS } from '../config';
-import { TennisiV1Light } from '../mds';
+import { TennisiThemeColors } from '../mds';
 
 export const BlurBg = (
   props: ComponentProps<typeof BlurView> & {
     androidEnabled?: boolean;
     androidTransparent?: boolean;
-    androidBackgroundColor?: keyof (typeof TennisiV1Light)['colors'];
+    androidBackgroundColor?: TennisiThemeColors;
   }
 ) => {
   const initialIntensity = props.intensity || 30;
