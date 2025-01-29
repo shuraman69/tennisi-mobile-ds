@@ -1,6 +1,6 @@
 import { ComponentProps, useCallback, useMemo } from 'react';
 import { BoxProps } from '@shopify/restyle';
-import { TennisiTheme, TennisiV1Light } from '../mds';
+import { TennisiTheme, TennisiThemeColors, TennisiV1Light } from '../mds';
 import { getRestyleProps } from '../utils';
 import { Row } from './Row';
 import { Card } from './Card';
@@ -16,7 +16,7 @@ export const MatchBetButtonsRow = ({
   size = 'd',
   buttonBlurTint = 'default',
   buttonBlurIntensity = 20,
-  androidBlurEnabled,
+  androidBlurBackgroundColor,
 }: {
   lineTitle?: string;
   buttons: { title: string; value: string }[];
@@ -24,7 +24,7 @@ export const MatchBetButtonsRow = ({
   size?: 's' | 'd';
   buttonBlurTint?: 'default' | 'dark';
   buttonBlurIntensity?: number;
-  androidBlurEnabled?: boolean;
+  androidBlurBackgroundColor?: TennisiThemeColors;
 }) => {
   const SIZE = useMemo(() => ({ d: 70, s: 56 })[size], [size]);
   const VARIANT = useCallback(
@@ -99,7 +99,7 @@ export const MatchBetButtonsRow = ({
             <BlurBg
               intensity={buttonBlurIntensity}
               tint={buttonBlurTint}
-              androidEnabled={androidBlurEnabled}
+              androidBackgroundColor={androidBlurBackgroundColor}
             />
             <TouchableOpacity style={{ width: '100%' }}>
               <Box alignSelf={'flex-start'}>

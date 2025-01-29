@@ -3,7 +3,7 @@ import { Card } from './Card';
 import { Row } from './Row';
 import { Text } from './Text';
 import { CskaIcon, StarEmptyIcon } from '../icons';
-import { useAppTheme } from '../mds';
+import { TennisiThemeColors, useAppTheme } from '../mds';
 import { getRestyleProps } from '../utils';
 import { MatchBetButtonsRow } from './MatchBetButtonsRow';
 import { BlurBg } from './BlurBg';
@@ -13,10 +13,12 @@ export const MatchBanner = ({
   title,
   buttons,
   message,
+  androidBackgroundColor,
 }: {
   title?: string;
   buttons?: boolean;
   message?: string;
+  androidBackgroundColor?: TennisiThemeColors;
 }) => {
   const theme = useAppTheme();
   const cardProps = getRestyleProps<typeof Card>({
@@ -45,7 +47,11 @@ export const MatchBanner = ({
         </Text>
       )}
       <Card {...cardProps}>
-        <BlurBg tint={'default'} intensity={24} />
+        <BlurBg
+          tint={'default'}
+          intensity={24}
+          androidBackgroundColor={androidBackgroundColor}
+        />
 
         <Row alignItems={'center'} justifyContent={'space-between'} mb={'x3'}>
           <Text variant={'p-s-semibold'} color={'textSecondary'}>
@@ -70,6 +76,7 @@ export const MatchBanner = ({
       </Card>
       {buttons && (
         <MatchBetButtonsRow
+          androidBlurBackgroundColor={androidBackgroundColor}
           buttons={[
             {
               title: 'X',
