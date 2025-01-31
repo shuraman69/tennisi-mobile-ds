@@ -44,7 +44,7 @@ export const SegmentedControl = ({
         fontStyle={{ color: theme.colors.textSecondary }}
         activeFontStyle={{ color: theme.colors.textPrimary }}
         backgroundColor={theme.colors.controlsTertiary}
-        tintColor={theme.colors.controlsQuaternary}
+        tintColor={theme.colors.backgroundTertiary}
       />
     </AnimatedBox>
   );
